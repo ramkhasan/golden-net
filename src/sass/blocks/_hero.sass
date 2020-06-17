@@ -1,0 +1,84 @@
+.hero 
+  &-block 
+    display: flex 
+    justify-content: space-between
+    padding-top: 116px
+  &-text 
+    padding-top: 50px
+    max-width: 640px
+    &__offer 
+      max-width: 160px
+      font-size: 14px
+      border: 1px solid $main-color
+      border-radius: 8px
+      padding: 6px 11px
+      position: relative
+      +light
+      &:before, &:after 
+        content: ''
+        position: absolute
+        left: 20px
+        bottom: -20px
+        border: 10px solid transparent
+        border-top: 10px solid $main-color
+      &:after 
+        border-top: 10px solid $hero-color
+        bottom: -19px
+    &__description 
+      padding-top: 46px
+      line-height: 1.5
+      max-width: 580px
+    &__title 
+      padding-top: 32px
+      padding-bottom: 43px
+      font-size: 30px
+      color: $main-color 
+      line-height: 1.4
+      +bold
+      span 
+        font-size: 38px
+        color: $text-color
+        +black
+  &-image 
+    position: relative
+    width: 380px
+    height: 240px
+    border-radius: 8px
+    box-shadow: 0 15px 25px rgba($black-color, 0.15)
+    transition: .6s
+    &:hover 
+      transition: .6s
+      transform: translateY(-10px)
+    &:after 
+      content: ''
+      background: url(../img/hero/present.svg) no-repeat
+      background-position: center
+      position: absolute
+      top: -30px
+      left: -30px
+      width: 60px
+      height: 60px
+      border-radius: 50%
+      background-color: #282828
+      opacity: 0.949
+    &__img
+      position: absolute
+      width: 100%
+      height: 100%
+      border-radius: 8px
+      object-fit: cover
+
+@media screen and ( max-width: 1200px )
+  .hero 
+    &-block 
+      flex-direction: column 
+    &-text 
+      &__button 
+        display: flex 
+        margin: auto
+    &-image 
+      margin: auto
+@media screen and ( max-width: 425px )
+  .hero 
+    &-image 
+      width: 320px 

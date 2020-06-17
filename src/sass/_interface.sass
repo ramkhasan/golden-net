@@ -1,0 +1,47 @@
+*
+  box-sizing: border-box
+  outline: none
+body
+  position: relative
+  color: $text-color
+  height: 100%
+  font-size: 16px
+  font-family: 'Museo Sans 500 Medium', sans-serif
+main 
+  position: relative
+  overflow: hidden
+.container
+  position: relative
+  width: 1110px
+  margin: auto
+.section
+  padding: 109px 0 102px
+.button 
+  padding: 19px 84px
+  border: none
+  border-radius: 100px
+  color: $hero-color
+  background-color: $main-color
+  box-shadow: 0px 10px 30px 0px rgba($main-color, 0.5)
+  cursor: pointer
+  transition: ease 0.3s
+  &:hover
+    transform: scale(1.03)
+    box-shadow: 0 10px 30px rgba($main-color, 0.7)
+    opacity: .8
+    &:active
+      transform: scale(.98)
+      opacity: .6
+ 
+@media (max-width: 1200px)
+  .container
+    max-width: 760px
+    width: 95%
+@media (max-width: 768px)
+  .container
+    max-width: 580px
+    width: 90%
+@media (max-width: 375px)
+  .container
+    max-width: 320px
+    width: 90%
