@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ювелирная компания "Золотая сеть"</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="login-block" id="login-block">
+      <div class="login-navbar">
+        <a class="login-logo" href="javascript:parent.jQuery.fancybox.close();">
+          <img class="login-logo__img" src="img/header/logo.svg" alt="Назад" />
+        </a>
+        <!-- /.login-logo -->
+        <a href="reg.html" class="login-reg fancybox">Регистрация</a>
+      </div>
+      <!-- /.login-navbar -->
+      <div class="login-form">
+        <h4 class="login-form__title">Авторизация</h4>
+        <!-- /.login-form__title -->
+        <form class="login-form__inputs" id="login-form">
+          <input type="email" name="email" class="input login-form__input email" required placeholder="Эл. почта" />
+          <input type="password" name="password" class="input login-form__input password" required
+            placeholder="Пароль" />
+          <button class="button login-form__button">Войти</button>
+          <a class="login-form__forgot" href="#">Забыли пароль?</a>
+          <a href="reg.html" class="login-reg__mob fancybox">Зарегистрироваться</a>
+        </form>
+        <!-- /.login-form__inputs -->
+      </div>
+      <!-- /.login-form -->
+    </div>
+    <!-- /.login-block -->
+  </div>
+  <!-- /.container -->
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+  <!-- Fancybox JS -->
+  <script src="js/jquery.fancybox.min.js"></script>
+
+  <!-- Валидация форм -->
+  <script src="js/jquery.validate.min.js"></script>
+  <script>
+    // Валидация формы
+    $(document).ready(function () {
+      $("#login-form").validate({
+        rules: {
+          email: {
+            required: true,
+          },
+          password: {
+            required: true,
+          },
+        },
+        messages: {
+          email: {
+            required: "Укажите Ваш email",
+          },
+          password: {
+            required: "Укажите пароль",
+          },
+        },
+      });
+    });
+  </script>
+
+</body>
+
+</html>

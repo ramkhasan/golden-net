@@ -1,0 +1,54 @@
+<div class="callback-form" id="callback-form__block">
+  <h4 class="callback-form__title">
+    Отправьте заявку, чтобы получить кешбэк
+  </h4>
+  <!-- /.callback-form__title -->
+  <form action="mail.php" method="POST" class="callback-form__inputs" id="callback-form">
+    <input type="text" name="name" class="input callback-form__input name" required placeholder="Ваше имя" />
+    <input type="tel" name="phone" class="input callback-form__input phone" required placeholder="Ваш телефон" />
+    <input type="email" name="email" class="input callback-form__input email" required placeholder="Ваша эл. почта" />
+    <button class="button callback-form__button">
+      Получить кешбэк
+    </button>
+    <a data-fancybox data-type="iframe" data-src="privacy.html" href="javascript:;"
+      class="callback-form__privacy">Политика конфиденциальности</a>
+  </form>
+  <!-- /.callback-form__inputs -->
+</div>
+<!-- /.callback-form -->
+
+<script>
+  // Валидация формы
+  $(document).ready(function () {
+    $("#callback-form").validate({
+      rules: {
+        name: {
+          required: true,
+          minlength: 2,
+          maxlength: 15,
+        },
+        phone: {
+          required: true,
+        },
+        email: {
+          required: true,
+        },
+      },
+      messages: {
+        name: {
+          required: "Укажите Ваше имя",
+          minlength: jQuery.validator.format("Осталось символов: {0}"),
+          maxlength: jQuery.validator.format("Не больше 15 символов"),
+        },
+        phone: {
+          required: "Укажите Ваш телефон",
+        },
+        email: {
+          required: "Укажите Ваш email",
+        },
+      },
+    });
+    // Маска для телефона
+    $(".phone").mask("+7 (999) 999-99-99");
+  });
+</script>

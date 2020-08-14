@@ -1,0 +1,191 @@
+.contacts 
+  &-block 
+    display: flex
+    justify-content: space-between
+    padding-top: 41px
+    &__map 
+      max-width: 665px
+      width: 100%
+  &-map 
+    position: relative
+    max-width: 665px
+    width: 100%
+    height: 497px
+    box-shadow: 0px 10px 20px 0px rgba($text-color, 0.1)
+  &-address 
+    padding-top: 95px
+    padding-bottom: 30px
+    max-width: 320px
+    width: 100%
+    line-height: 1.5
+  &-phone
+    padding-bottom: 10px
+    &__tel 
+      margin-left: 15px
+      font-size: 18px
+      color: $text-color
+      text-decoration: none
+      background-image: linear-gradient($text-color, $text-color)
+      background-position: 0% 100%
+      background-repeat: no-repeat
+      background-size: 0% 1px
+      transition: background-size .3s
+      +bold
+      &:hover 
+        background-size: 100% 1px
+  &-email 
+    font-size: 12px
+    color: $main-color
+    text-decoration: none
+    background-image: linear-gradient($main-color, $main-color)
+    background-position: 0% 100%
+    background-repeat: no-repeat
+    background-size: 0% 1px
+    transition: background-size .3s
+    +med
+    &:hover 
+      background-size: 100% 1px
+  &-form 
+    position: relative
+    max-width: 350px
+    height: auto
+    margin-top: 56px
+    margin-bottom: 50px
+    padding-left: 25px
+    padding-right: 25px
+    border-radius: 8px
+    background-color: $hero-color
+    box-shadow: 0px 10px 20px 0px rgba($text-color, 0.1)
+    text-align: center
+    &__dialog 
+      max-width: 225px
+      font-size: 14px
+      color: $main-color
+      border: 1px solid $text-color
+      border-radius: 8px
+      padding: 6px 23px
+      position: absolute
+      right: 0
+      top: -86px
+      +light
+      &:before, &:after 
+        content: ''
+        position: absolute
+        right: 20px
+        bottom: -20px
+        border: 10px solid transparent
+        border-top: 10px solid $text-color
+      &:after 
+        border-top: 10px solid $hero-color
+        bottom: -19px
+    &__title 
+      font-size: 24px
+      color: $main-color
+      padding-top: 46px
+      padding-bottom: 31px
+      margin: 0
+      line-height: 1.25
+      +light
+    &__inputs 
+      padding-bottom: 20px
+    &__input 
+      border: 1px solid rgba($text-color, 0.15)
+      border-radius: 100px
+      max-width: 298px
+      width: 100%
+      height: 54px
+      text-align: center
+      margin-top: 19px
+    &__button
+      width: 100%
+      margin-top: 29px
+      margin-bottom: 17px
+      padding: 19px 50px
+    &__privacy 
+      text-align: center
+      font-size: 12px
+      text-decoration: none
+      color: rgba($text-color, 0.8)
+      background-image: linear-gradient($text-color, $text-color)
+      background-position: 0% 100%
+      background-repeat: no-repeat
+      background-size: 0% 1px
+      transition: background-size .3s
+      +light
+      &:hover 
+        color: $text-color
+        background-size: 100% 1px
+  &-logo 
+    opacity: 0.5
+    display: flex
+    justify-content: flex-end
+    margin-bottom: 64px
+    &__img 
+      width: 130px
+  &-social 
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    &__insta, &__fb, &__yt, &__wa, &__telega
+      width: 20px
+      height: 22px
+      margin-right: 20px
+    &__telega
+      margin-right: 0
+    &__insta 
+      background-image: url('../img/footer/instagram.svg')
+      background-repeat: no-repeat
+      background-size: 20px 22px
+    &__fb 
+      background-image: url('../img/footer/facebook.svg')
+      background-repeat: no-repeat
+      background-size: 20px 22px
+    &__yt 
+      background-image: url('../img/footer/youtube.svg')
+      background-repeat: no-repeat
+      background-size: 20px 22px
+    &__wa 
+      background-image: url('../img/footer/whatsapp.svg')
+      background-repeat: no-repeat
+      background-size: 20px 22px
+    &__telega 
+      background-image: url('../img/footer/telegram.svg')
+      background-repeat: no-repeat
+      background-size: 20px 22px
+#map 
+  z-index: 10
+/* Стилизация полей формы */
+input
+  caret-color: $main-color
+  &:focus
+    border: 1px solid $main-color
+  &::placeholder
+    opacity: 0.5
+
+@media screen and ( max-width: 1200px )
+  .contacts 
+    padding-top: 90px
+    &-block 
+      flex-direction: column
+      justify-content: center
+      padding-top: 0
+      &__map 
+        margin: auto
+      &__form 
+        padding-top: 138px
+    &-address 
+      padding-top: 52px
+    &-form 
+      margin: auto
+    &-logo 
+      justify-content: center
+      margin-top: 84px
+      margin-bottom: 55px
+    &-social 
+      justify-content: center
+      margin-bottom: 55px
+@media screen and ( max-width: 375px )
+  .contacts 
+    &-form 
+      padding-left: 10px
+      padding-right: 10px

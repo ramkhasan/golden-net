@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ювелирная компания "Золотая сеть"</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="reg-block" id="reg-block">
+      <div class="reg-navbar">
+        <a class="reg-logo" href="javascript:parent.jQuery.fancybox.close();">
+          <img class="reg-logo__img" src="img/header/logo.svg" alt="Назад" />
+        </a>
+        <!-- /.reg-logo -->
+        <a href="login.html" class="login-reg fancybox" class="reg-reg">Вход</a>
+      </div>
+      <!-- /.reg-navbar -->
+      <div class="reg-form">
+        <h4 class="reg-form__title">Регистрация</h4>
+        <!-- /.reg-form__title -->
+        <form class="reg-form__inputs" id="reg-form">
+          <input type="text" name="name" class="input reg-form__input name" required placeholder="Ваше имя" />
+          <input type="text" name="last_name" class="input reg-form__input last_name" required
+            placeholder="Ваша фамилия" />
+          <input type="email" name="email" class="input reg-form__input email" required placeholder="Эл. почта" />
+          <input type="tel" name="phone" class="input reg-form__input phone" required placeholder="Номер телефона" />
+          <input type="password" name="password" class="input reg-form__input password" required placeholder="Пароль" />
+          <input type="password" name="password_conf" class="input reg-form__input password_conf" required
+            placeholder="Подтверждение пароля" />
+          <input type="text" name="code" class="input reg-form__input code" required
+            placeholder="Код партнёра / номер телефона" />
+          <button class="button reg-form__button">Регистрация</button>
+        </form>
+        <!-- /.reg-form__inputs -->
+      </div>
+      <!-- /.reg-form -->
+    </div>
+    <!-- /.reg-block -->
+  </div>
+  <!-- /.container -->
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+  <!-- Fancybox JS -->
+  <script src="js/jquery.fancybox.min.js"></script>
+
+  <!-- Валидация форм + маска для телефона -->
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script>
+    // Валидация формы
+    $(document).ready(function () {
+      $("#reg-form").validate({
+        rules: {
+          name: {
+            required: true,
+            minlength: 2,
+            maxlength: 15,
+          },
+          last_name: {
+            required: true,
+          },
+          email: {
+            required: true,
+          },
+          phone: {
+            required: true,
+          },
+          password: {
+            required: true,
+          },
+          password_conf: {
+            required: true,
+          },
+          code: {
+            required: true,
+          },
+        },
+        messages: {
+          name: {
+            required: "Укажите Ваше имя",
+            minlength: jQuery.validator.format("Осталось символов: {0}"),
+            maxlength: jQuery.validator.format("Не больше 15 символов"),
+          },
+          last_name: {
+            required: "Укажите Вашу фамилию",
+          },
+          email: {
+            required: "Укажите Ваш email",
+          },
+          phone: {
+            required: "Пожалуйста, введите номер телефона",
+          },
+          password: {
+            required: "Укажите пароль",
+          },
+          password_conf: {
+            required: "Подтвердите пароль",
+          },
+          code: {
+            required: "Укажите код партнёра",
+          },
+        },
+      });
+      // Маска для телефона
+      $(".phone").mask("+7 (999) 999-99-99");
+    });
+  </script>
+
+</body>
+
+</html>

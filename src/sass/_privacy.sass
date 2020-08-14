@@ -1,0 +1,38 @@
+.privacy
+  &-modal
+    padding: 50px
+    line-height: 1.5
+    &__close 
+      background-color: $hero-color
+      color: $text-color
+      opacity: 0.5
+      text-decoration: none
+      width: 100%
+      background-image: linear-gradient($text-color, $text-color)
+      background-position: 0% 100%
+      background-repeat: no-repeat
+      background-size: 0% 1px
+      transition: background-size .3s
+      &:hover 
+        background-size: 100% 1px
+    &__title
+      font-size: 22px
+      margin-bottom: 50px
+      text-align: center
+      +bold
+@media screen and ( max-width: 413px )
+  .privacy
+    &-modal
+      padding: 30px
+      &__title
+        font-size: 20px
+        &__description
+          font-size: 14px
+@media screen and ( max-width: 347px )
+  .privacy
+    &-modal
+      padding: 15px
+      &__title
+        font-size: 16px
+        &__description
+          font-size: 12px

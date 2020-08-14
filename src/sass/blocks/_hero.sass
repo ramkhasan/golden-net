@@ -2,11 +2,11 @@
   &-block 
     display: flex 
     justify-content: space-between
-    padding-top: 116px
+    padding: 116px 0 80px
   &-text 
     padding-top: 50px
     max-width: 640px
-    &__offer 
+    &__dialog 
       max-width: 160px
       font-size: 14px
       border: 1px solid $main-color
@@ -72,13 +72,34 @@
   .hero 
     &-block 
       flex-direction: column 
+      padding-top: 0
     &-text 
+      padding-bottom: 56px
+      margin: auto
       &__button 
         display: flex 
         margin: auto
     &-image 
       margin: auto
+      &:after 
+        left: 10px
 @media screen and ( max-width: 425px )
   .hero 
+    &-text 
+      padding-top: 20px
+      &__description 
+        padding-top: 24px
+        font-size: 12px
+      &__title 
+        padding-top: 12px
+        padding-bottom: 28px
+        font-size: 24px
+        span 
+          font-size: 28px
     &-image 
+      margin: auto
       width: 320px 
+@media screen and ( max-width: 360px )
+  .hero 
+    &-image 
+      width: 100%

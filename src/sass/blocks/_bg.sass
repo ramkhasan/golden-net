@@ -1,0 +1,61 @@
+.bg 
+  &-circle 
+    &__hero 
+      position: absolute
+      background: $text-color
+      top: 3px
+      right: -984px
+      width: 700px
+      height: 700px
+      border-radius: 50%
+    &__info 
+      position: absolute
+      background: $main-color
+      top: 801px
+      left: -1119px
+      width: 1470px
+      height: 1470px
+      border-radius: 50%
+
+@media screen and ( max-width: 1200px )
+  .bg 
+    &-circle 
+      &__hero 
+        display: none
+      &__info 
+        left: -850px
+        top: 1717px
+        width: 1210px
+        height: 1210px
+@media screen and ( max-width: 768px )
+  .bg 
+    &-circle 
+      &__info 
+        left: -950px
+@media screen and ( max-width: 640px )
+  .bg 
+    &-circle 
+      &__info 
+        top: 1750px
+@media screen and ( max-width: 550px )
+  .bg 
+    &-circle 
+      &__info 
+        top: 1800px
+@media screen and ( max-width: 480px )
+  .bg 
+    &-circle 
+      &__info 
+        top: 1900px
+        left: -1000px
+@media screen and ( max-width: 425px )
+  .bg 
+    &-circle 
+      &__info 
+        top: 1717px
+        left: -1007px
+@media screen and ( max-width: 359px )
+  .bg 
+    &-circle 
+      &__info 
+        top: 1820px

@@ -1,0 +1,180 @@
+.info 
+  &-block 
+    display: flex
+  &-image 
+    width: 39.5%
+    position: relative
+    left: -46px
+    display: flex
+    justify-content: center
+    &__img 
+      max-width: 438px 
+      width: 100%
+    &__button 
+      position: absolute
+      top: 85.7%
+      left: 10%
+      right: 0
+      width: 190px
+      margin: auto
+      border-radius: 4px
+      background-color: $text-color
+      box-shadow: 0px 10px 20px 0px rgba($text-color, 0.3)
+      padding: 9px 72px
+      font-size: 14px
+      &:hover
+        box-shadow: 0 10px 30px rgba($text-color, 0.7)
+  &-text 
+    max-width: 670px
+    padding-top: 41px
+    padding-left: 151px
+    &__dialog 
+      width: 570px
+      border: 2px solid #d1b371
+      border-radius: 8px
+      padding: 30px 47px
+      line-height: 1.5
+      position: relative
+      left: -49px
+      &:before, &:after 
+        content: ''
+        position: absolute
+        left: -22px
+        bottom: 117px
+        border: 10px solid transparent
+        border-right: 10px solid $main-color
+      &:after 
+        border-right: 10px solid $hero-color
+        left: -19px
+    &__title 
+      font-size: 24px
+      color: $main-color
+      line-height: 1.25
+      text-align: left
+      padding-top: 46px
+    &__list 
+      padding-top: 32px
+    &__item 
+      position: relative
+      line-height: 1.5
+      padding-bottom: 24px
+      &-img 
+        position: absolute 
+        left: -27px
+        top: 4px
+    &__description 
+      padding-top: 50px
+      font-size: 14px
+      line-height: 1.7
+      +light
+  &-stock 
+    &__text 
+      padding-top: 29px
+      font-size: 14px
+      line-height: 1.5
+    &__gold 
+      padding-top: 30px
+      max-width: 170px
+      display: flex
+      justify-content: space-between
+    &__yellow 
+      width: 34px
+      height: 34px
+      border-radius: 4px
+      background-color: $main-color
+      box-shadow: 0px 10px 20px 0px rgba($main-color, 0.3)
+    &__white 
+      width: 34px
+      height: 34px
+      border-radius: 4px
+      background-color: $white-color
+      box-shadow: 0px 10px 20px 0px rgba($white-color, 0.3)
+    &__red 
+      width: 34px
+      height: 34px
+      border-radius: 4px
+      background-color: $red-color
+      box-shadow: 0px 10px 20px 0px rgba($red-color, 0.3)
+
+@media screen and ( max-width: 1200px )
+  .info 
+    &-block 
+      flex-direction: column-reverse
+      justify-content: center
+    &-image 
+      padding-top: 40px
+      width: 100%
+      text-align: center
+      left: -2.8%
+      &__button 
+        left: 6%
+    &-text 
+      padding-top: 0
+      padding-left: 0
+      margin: auto
+      &__item 
+        left: 20px
+        &-img 
+          left: -20px
+          top: 2px
+      &__dialog 
+        max-width: 670px
+        padding: 30px 19px
+        left: 0
+        width: 100%
+        &:before, &:after 
+          content: ''
+          position: absolute
+          left: 20px
+          bottom: -20px
+          border: 10px solid transparent
+          border-top: 10px solid #d1b371
+        &:after 
+          border-top: 10px solid #fff
+          bottom: -17px
+@media screen and ( max-width: 768px )
+  .info 
+    &-image 
+      left: -3.7%
+      &__button 
+        left: 8%
+    &-text 
+      &__description 
+        padding-top: 38px
+        line-height: 1.6
+@media screen and ( max-width: 425px )
+  .info 
+    &-image 
+      padding-top: 55px
+      left: -5.5%
+      &__button 
+        left: 12%
+    &-text 
+      &__title 
+        font-size: 20px
+        line-height: 1.4
+      &__list 
+        padding-top: 42px
+      &__item 
+        max-width: 283px
+      &__description 
+        padding-bottom: 47px
+    &-stock 
+      max-width: 320px
+      height: auto
+      padding: 16px 20px 20px
+      border-radius: 8px
+      background-color: $hero-color
+      box-shadow: 0px 10px 20px 0px rgba($text-color, 0.1)
+      margin: auto
+      &__text 
+        padding-top: 0
+@media screen and ( max-width: 360px )
+  .info 
+    &-image 
+      width: 120%
+      left: -16%
+      &__img 
+        width: 95%
+      &__button 
+        left: 10%

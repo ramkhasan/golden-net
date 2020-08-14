@@ -10,36 +10,43 @@
 </head>
 
 <body>
-
   <main>
+
+    <div class="container">
+      <div class="bg-circle bg-circle__hero"></div>
+      <div class="bg-circle bg-circle__info"></div>
+    </div>
+    <!-- /.container -->
 
     <header>
       <div class="navbar">
         <div class="container">
           <div class="navbar-block">
             <div class="navbar-logo">
-              <img class="navbar-logo__img" src="img/navbar/logo.svg" alt="Логотип">
+              <img class="navbar-logo__img" src="img/header/logo.svg" alt="Логотип" />
             </div>
             <!-- /.navbar-logo -->
             <div class="navbar-contacts">
               <a href="mailto:hello@mygoldenweb.com" class="navbar-contacts__email">hello@mygoldenweb.com</a>
               <div class="navbar-contacts__phone">
-                <img src="img/navbar/phone.svg" alt="Телефон" class="navbar-contacts__img">
+                <img src="img/header/phone.svg" alt="Телефон" class="navbar-contacts__img" />
                 <a href="tel:8 (800) 550-72-93" class="navbar-contacts__tel">8 (800) 550-72-93</a>
               </div>
             </div>
             <!-- /.navbar-contacts -->
             <div class="navbar-links">
-              <a href="#" class="navbar-links__login">Вход</a>
-              <button class="button navbar-links__reg">Регистрация</button>
+              <a data-fancybox data-type="iframe" data-src="login.html" href="javascript:;"
+                class="navbar-links__login">Вход</a>
+              <button data-fancybox data-type="iframe" data-src="reg.html" href="javascript:;"
+                class="button navbar-links__reg">Регистрация</button>
             </div>
             <!-- /.navbar-links -->
             <div class="navbar-mob">
-              <a href="#" class="navbar-mob__user">
-                <img src="img/navbar/user.svg" alt="Вход">
+              <a data-fancybox data-type="iframe" data-src="login.html" href="javascript:;" class="navbar-mob__user">
+                <img src="img/header/user.svg" alt="Вход" />
               </a>
-              <a href="#" class="navbar-mob__phone">
-                <img src="img/navbar/phone-mob.svg" alt="Телефон">
+              <a href="tel:8 (800) 550-72-93" class="navbar-mob__phone">
+                <img src="img/header/phone-mob.svg" alt="Телефон" />
               </a>
             </div>
             <!-- /.navbar-mob -->
@@ -56,22 +63,28 @@
       <div class="container">
         <div class="hero-block">
           <div class="hero-text">
-            <div class="hero-text__offer">Спец. предложение!</div>
-            <!-- /.hero-text__offer -->
-            <div class="hero-text__description">«Золотая сеть» впервые запустила маркетинговую программу для своих
-              клиентов и партнёров. Не упусти свой шанс выгодно заработать, приобретая уникальные и качественные
-              ювелирные изделия! Украшения из драгоценных металлов не только будут чудесным подарком, но и помогут
-              приумножить капитал.</div>
-            <!-- /.hero-text__description -->
-            <div class="hero-text__title">За каждую покупку или заказ Вы получаете <span>невероятный кешбэк!</span>
+            <div class="hero-text__dialog">Спец. предложение!</div>
+            <!-- /.hero-text__dialog -->
+            <div class="hero-text__description">
+              «Золотая сеть» впервые запустила маркетинговую программу для
+              своих клиентов и партнёров. Не упусти свой шанс выгодно
+              заработать, приобретая уникальные и качественные ювелирные
+              изделия! Украшения из драгоценных металлов не только будут
+              чудесным подарком, но и помогут приумножить капитал.
             </div>
+            <!-- /.hero-text__description -->
+            <h1 class="hero-text__title">
+              За каждую покупку или заказ Вы получаете
+              <span>невероятный кешбэк!</span>
+            </h1>
             <!-- /.hero-text__title -->
-            <button class="button hero-text__button">Получить кешбэк</button>
+            <button class="button hero-text__button" data-fancybox data-type="ajax" data-src="callback.html"
+              href="javascript:;">Получить кешбэк</button>
             <!-- /.button -->
           </div>
           <!-- /.hero-text -->
           <div class="hero-image">
-            <img src="img/hero/photo.jpg" alt="Золотая сеть" class="hero-image__img">
+            <img src="img/hero/photo.jpg" alt="Золотая сеть" class="hero-image__img" />
           </div>
           <!-- /.hero-image -->
         </div>
@@ -81,7 +94,303 @@
     </section>
     <!-- /.hero -->
 
+    <section class="section info">
+      <div class="container">
+        <h2 class="section-title info-title">Как это работает?</h2>
+        <!-- /.section-title info-title -->
+        <div class="info-block">
+          <div class="info-image">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="img/info/phone.png" alt="Телефон" class="info-image__img" />
+                  <button class="button info-image__button" data-fancybox data-type="ajax" data-src="buy.html"
+                    href="javascript:;">Купить</button>
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/info/phone.png" alt="Телефон" class="info-image__img" />
+                  <button class="button info-image__button" data-fancybox data-type="ajax" data-src="buy.html"
+                    href="javascript:;">Купить</button>
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/info/phone.png" alt="Телефон" class="info-image__img" />
+                  <button class="button info-image__button" data-fancybox data-type="ajax" data-src="buy.html"
+                    href="javascript:;">Купить</button>
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/info/phone.png" alt="Телефон" class="info-image__img" />
+                  <button class="button info-image__button" data-fancybox data-type="ajax" data-src="buy.html"
+                    href="javascript:;">Купить</button>
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/info/phone.png" alt="Телефон" class="info-image__img" />
+                  <button class="button info-image__button" data-fancybox data-type="ajax" data-src="buy.html"
+                    href="javascript:;">Купить</button>
+                </div>
+              </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+          <!-- /.info-image -->
+          <div class="info-text">
+            <div class="info-text__dialog">
+              Приобретая наши ювелирные изделия на любую сумму, Вы
+              обеспечиваете себя ежемесячными бонусами и большим кешбэком. Вы
+              самостоятельно принимаете решение, в какой период будете
+              получать выплаты.
+            </div>
+            <!-- /.info-text__dialog -->
+            <div class="info-text__title">
+              Позвольте Вашим украшениям приносить двойную пользу:
+            </div>
+            <!-- /.info-text__title -->
+            <div class="info-text__list">
+              <div class="info-text__item">
+                <img src="img/info/arrow.svg" alt="Стрелка" class="info-text__item-img" />
+                Приносить моральное удовольствие от небывалой роскоши и
+                эксклюзивности!
+              </div>
+              <!-- /.info-text__item -->
+              <div class="info-text__item">
+                <img src="img/info/arrow.svg" alt="Стрелка" class="info-text__item-img" />
+                Приносить невероятный капитал!
+              </div>
+              <!-- /.info-text__item -->
+            </div>
+            <!-- /.info-text__list -->
+            <div class="info-text__description">
+              Наша продукция эксклюзивная и качественная. Каждое изделие имеет
+              маркировку соответствующей пробы (585, 925, 989). Кроме
+              стандартного штампа на изделии каждое украшение имеет свой
+              штрих-код, по которому Вы сможете проверить уникальность,
+              отсканировав его при получении заказа или перед покупкой в наших
+              офлайн магазинах.
+            </div>
+            <!-- /.info-text__description -->
+            <div class="info-stock">
+              <div class="info-stock__text">
+                В наш ассортимент входят ювелирные изделия с драгоценными
+                камнями на любой вкус из золота жёлтого, белого и красного:
+              </div>
+              <!-- /.info-stock__text -->
+              <div class="info-stock__gold">
+                <div class="info-stock__yellow"></div>
+                <div class="info-stock__white"></div>
+                <div class="info-stock__red"></div>
+              </div>
+              <!-- /.info-stock__gold -->
+            </div>
+            <!-- /.info-stock -->
+          </div>
+          <!-- /.info-text -->
+        </div>
+        <!-- /.info-block -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section info -->
+
+    <footer class="section contacts">
+      <div class="container">
+        <h2 class="section-title contacts-title">Как с нами связаться?</h2>
+        <!-- /.section-title contacts-title -->
+        <div class="contacts-block">
+          <div class="contacts-block__map">
+            <div class="contacts-map" id="map"></div>
+            <div class="contacts-address">
+              115184,<br>г. Москва, Руновский переулок, 6, стр. 2, этаж 3, (офис 16)
+            </div>
+            <!-- /.contacts-address -->
+            <div class="contacts-phone">
+              <img src="img/header/phone.svg" alt="Телефон" class="contacts-phone__img" />
+              <a href="tel:8 (800) 550-72-93" class="contacts-phone__tel">8 (800) 550-72-93</a>
+            </div>
+            <!-- /.contacts-phone -->
+            <a href="mailto:hello@mygoldenweb.com" class="contacts-email">hello@mygoldenweb.com</a>
+          </div>
+          <!-- /.contacts-block__map -->
+          <div class="contacts-block__form">
+            <div class="contacts-form">
+              <div class="contacts-form__dialog">Консультация бесплатная!</div>
+              <!-- /.contact-form__dialog -->
+              <h4 class="contacts-form__title">
+                Отправьте заявку, чтобы принять участие
+              </h4>
+              <!-- /.contacts-form__title -->
+              <form action="mail.php" method="POST" class="contacts-form__inputs" id="contacts-form">
+                <input type="text" name="name" class="input contacts-form__input name" required
+                  placeholder="Ваше имя" />
+                <input type="tel" name="phone" class="input contacts-form__input phone" required
+                  placeholder="Ваш телефон" />
+                <input type="email" name="email" class="input contacts-form__input email" required
+                  placeholder="Ваша эл. почта" />
+                <button class="button contacts-form__button">
+                  Принять участие
+                </button>
+                <a data-fancybox data-type="iframe" data-src="privacy.html" href="javascript:;"
+                  class="contacts-form__privacy">Политика конфиденциальности</a>
+              </form>
+              <!-- /.contacts-form__inputs -->
+            </div>
+            <!-- /.contacts-form -->
+            <div class="contacts-logo">
+              <img class="contacts-logo__img" src="img/header/logo.svg" alt="Логотип" />
+            </div>
+            <!-- /.contacts-logo -->
+            <div class="contacts-social">
+              <a class="contacts-social__insta" href="https://www.instagram.com/gold.web.business/" target="_blank"></a>
+              <a class="contacts-social__fb" href="https://www.facebook.com/Goldwebbusiness" target="_blank"></a>
+              <a class="contacts-social__yt" href="https://www.youtube.com/channel/UCt-IxK_-95C1RlcHonRVvCA/"
+                target="_blank"></a>
+              <a class="contacts-social__wa" href="https://wa.me/79654142533" target="_blank"></a>
+              <a class="contacts-social__telega" href="tg://resolve?domain=Gold_web_bot" target="_blank"></a>
+            </div>
+            <!-- /.contacts-social -->
+          </div>
+          <!-- /.contacts-block__form -->
+          <a href="#" class="scrollup"></a>
+        </div>
+        <!-- /.contacts-block -->
+      </div>
+      <!-- /.container -->
+    </footer>
+    <!-- /.footer contacts -->
+
   </main>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <!-- /.Кнопка плавной прокрутки вверх -->
+  <script>
+    $(document).ready(function () {
+
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $('.scrollup').fadeIn();
+        } else {
+          $('.scrollup').fadeOut();
+        }
+      });
+
+      $('.scrollup').click(function () {
+        $("html, body").animate({
+          scrollTop: 0
+        }, 600);
+        return false;
+      });
+
+    });
+  </script>
+
+  <!-- Слайдер Swiper -->
+  <link rel="stylesheet" href="css/swiper.min.css" />
+  <script src="js/swiper.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".swiper-container", {
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+  <!-- Fancybox JS -->
+  <script src="js/jquery.fancybox.min.js"></script>
+
+  <!-- Валидация форм + маска для телефона -->
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script>
+    // Валидация формы
+    $(document).ready(function () {
+      $("#contacts-form").validate({
+        rules: {
+          name: {
+            required: true,
+            minlength: 2,
+            maxlength: 15,
+          },
+          phone: {
+            required: true,
+          },
+          email: {
+            required: true,
+          },
+        },
+        messages: {
+          name: {
+            required: "Укажите Ваше имя",
+            minlength: jQuery.validator.format("Осталось символов: {0}"),
+            maxlength: jQuery.validator.format("Не больше 15 символов"),
+          },
+          phone: {
+            required: "Укажите Ваш телефон",
+          },
+          email: {
+            required: "Укажите Ваш email",
+          },
+        },
+      });
+      // Маска для телефона
+      $(".phone").mask("+7 (999) 999-99-99");
+    });
+  </script>
+
+  <!-- Своя метка на Яндекс карте -->
+  <script type="text/javascript"
+    src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=d9a5b870-9f3c-4b84-ba97-7276ba4c98ca"></script>
+  <script>
+    ymaps.ready(function () {
+      var myMap = new ymaps.Map(
+          "map", {
+            center: [55.742970, 37.634552],
+            zoom: 16,
+          }, {
+            searchControlProvider: "yandex#search",
+          }
+        ),
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+        myPlacemarkWithContent = new ymaps.Placemark(
+          [55.742970, 37.634552], {
+            hintContent: 'Ювелирная компания "Золотая сеть"',
+            balloonContent: "г. Москва, Руновский переулок, 6, стр. 2, этаж 3, (офис 16)",
+            iconContent: "",
+          }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: "default#imageWithContent",
+            // Своё изображение иконки метки.
+            iconImageHref: "img/contacts/map-icon.svg",
+            // Размеры метки.
+            iconImageSize: [44, 44],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-22, -22],
+            // Смещение слоя с содержимым относительно слоя с картинкой.
+            iconContentOffset: [15, 15],
+            // Макет содержимого.
+            iconContentLayout: MyIconContentLayout,
+          }
+        );
+
+      // Отключение изменение масштаба карты колесом мыши на десктопах
+      myMap.behaviors.disable("scrollZoom");
+      // Отключение мультитач жестов
+      myMap.behaviors.disable("multiTouch");
+      // Отключаем перетаскивание карты
+      // myMap.behaviors.disable("drag");
+
+      myMap.geoObjects.add(myPlacemarkWithContent);
+    });
+  </script>
 
 </body>
 

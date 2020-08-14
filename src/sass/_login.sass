@@ -1,0 +1,133 @@
+.login
+  &-navbar 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 28px
+    padding-bottom: 45px
+  &-block
+    height: 100%
+  &-logo 
+    max-width: 130px
+    width: 100%
+    &__img 
+      width: 130px
+  &-reg 
+    font-size: 14px
+    text-decoration: none
+    color: rgba($text-color, 0.8)
+    background-image: linear-gradient($text-color, $text-color)
+    background-position: 0% 100%
+    background-repeat: no-repeat
+    background-size: 0% 1px
+    cursor: pointer
+    transition: background-size .3s
+    +light
+    &:hover 
+      color: $text-color
+      background-size: 100% 1px 
+    &__mob 
+      display: none
+  &-form 
+    max-width: 410px
+    width: 100%
+    margin: auto
+    margin-bottom: 50px
+    text-align: center
+    border-radius: 8px
+    background-color: $hero-color
+    box-shadow: 0px 10px 20px 0px rgba($text-color, 0.05)
+    &__title
+      padding-top: 37px
+      padding-bottom: 36px
+      margin: 0
+      text-align: center
+      +bold
+    &__inputs
+      padding-bottom: 45px
+    &__input 
+      border: 1px solid rgba($text-color, 0.15)
+      border-radius: 4px
+      max-width: 330px
+      width: 100%
+      height: 45px
+      font-size: 14px
+      text-align: left
+      padding-left: 43px
+      margin-top: 23px
+    &__button
+      display: block
+      margin: auto
+      font-size: 14px
+      max-width: 330px
+      width: 100%
+      border-radius: 4px
+      margin-top: 23px
+      margin-bottom: 36px
+      padding: 14px 50px
+    &__forgot 
+      text-align: center
+      font-size: 12px
+      text-decoration: none
+      color: rgba($text-color, 0.8)
+      background-image: linear-gradient($text-color, $text-color)
+      background-position: 0% 100%
+      background-repeat: no-repeat
+      background-size: 0% 1px
+      transition: background-size .3s
+      +light
+      &:hover 
+        color: $text-color
+        background-size: 100% 1px 
+input.login-form__input[type="email"] 
+  background: url(../img/login/user-silver.svg) no-repeat
+  background-position: left
+  background-position-x: 15px
+  &:focus
+    background: url(../img/login/user-gold.svg) no-repeat
+    background-position: left
+    background-position-x: 15px
+input.login-form__input[type="password"] 
+  background: url(../img/login/lock-silver.svg) no-repeat
+  background-position: left
+  background-position-x: 15px
+  &:focus
+    background: url(../img/login/lock-gold.svg) no-repeat
+    background-position: left
+    background-position-x: 15px
+
+@media screen and ( max-width: 413px )
+  .login
+    &-navbar 
+      padding-top: 36px
+      padding-bottom: 45px
+    &-form 
+      box-shadow: none
+      &__title 
+        padding-top: 0
+    &-reg 
+      display: none
+      &__mob 
+        display: block
+        width: 140px
+        margin: auto
+        font-size: 16px
+        justify-content: center
+        margin-top: 40px
+        font-size: 14px
+        color: $text-color
+        text-decoration: none
+        background-image: linear-gradient($text-color, $text-color)
+        background-position: 0% 100%
+        background-repeat: no-repeat
+        background-size: 0% 1px
+        transition: background-size .3s
+        &:hover 
+          color: $text-color
+          background-size: 100% 1px 
+
+@media screen and ( max-width: 347px )
+  .login
+    &-form
+      &__title
+        font-size: 16px
